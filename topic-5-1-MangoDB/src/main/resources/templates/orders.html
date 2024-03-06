@@ -1,0 +1,32 @@
+<html lang="en" layout:decorate="layouts/defaultLayout">
+<head>
+	<title>
+		
+	</title>
+</head>
+<body layout:fragment="content">
+	<h3 th:text = "${title}">title</h3>
+	<div>
+		<table class="table table-striped">
+		  <thead>
+		    <tr>
+		      <th scope="col">ID</th>
+		      <th scope="col">OrderNumber</th>
+		      <th scope="col">Name</th>
+		      <th scope="col">Price</th>
+		      <th scope="col">Quantity</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr th:each="order :${orders}">
+		      <td th:text="${order.id}">1</td>
+		      <td th:text="${order.orderNo}">0000</td>
+		      <td th:text="${order.productName}">test</td>
+		      <td th:text="${order.price}">1.1</td>
+		      <td th:text="${order.quantity}">10</td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+</body>
+</html>
